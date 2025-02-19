@@ -26,7 +26,7 @@ function startTimer(startTiming) {
             // Play the alarm sound
             alarm_sound.play();
             // Make sure it loops (if required)
-            alarm_sound.loop = false; // Set to false if you want it to play once
+            alarm_sound.loop = true; // Set to false if you want it to play once
             alarm_sound.volume = 1; // Ensure full volume when the timer ends
             document.body.style.backgroundImage = "url('finished.gif')";
             document.body.style.backgroundRepeat = "no-repeat";
