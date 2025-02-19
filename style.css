@@ -1,6 +1,9 @@
 body {
-    display: flex; 
-    margin-top: 30vh;
+    background: url('capybara.gif') no-repeat center center fixed; /* This ensures the image is centered and fixed */
+    background-size: cover; /* This ensures the background image covers the entire screen */
+    height: 100vh; /* Make sure the body takes the full height of the viewport */
+    margin: 0; /* Remove default margin */
+
     
     
 }
