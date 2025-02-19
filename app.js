@@ -16,21 +16,27 @@ function startTimer(startTiming) {
 
         // Decrement the time
         time--;
-
+        const alarm_sound = new Audio("capybara_song.mp3");
+        alarm_sound.load();
         // When the time runs out
         if (time < 0) {
+            
+            alarm_sound.play();
             clearInterval(interval);
-            const alarm_sound = new Audio("capybara_song.mp3");
+            
 
             count.style.display = "none";
             // Play the alarm sound
-            alarm_sound.play();
+            
             // Make sure it loops (if required)
             alarm_sound.loop = true; // Set to false if you want it to play once
             alarm_sound.volume = 1; // Ensure full volume when the timer ends
             document.body.style.backgroundImage = "url('finished.gif')";
             document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundSize = "1480px 780px";
+            document.body.style.backgroundSize = "contain"; // Ensures the image covers the entire screen
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundColor = "#9cd9ec";
+            
         }
     }
 }
