@@ -1,0 +1,16 @@
+body {
+    display: flex; 
+    margin-top: 30vh;
+    
+    
+}
+
+#countdown_timer_runny {
+    position: absolute;
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: 800;
+    font-family: sans-serif;
+    margin-top: 35vh;
+    margin-left: 870px;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Runny Yolk</title>
+</head>
+<body background="capybara.gif"; style="background-size: 100% 400%; ";>
+    <p id="countdown_timer_runny"></p> <!-- Timer will be displayed here -->
+
+        
+    <script src="app.js"></script>
+    <script>
+        // Extract the timer value from the URL query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const timerValue = urlParams.get('timer') || 6; // Default to 6 minutes if no timer value is found
+        startTimer(parseInt(timerValue));
+    </script>
+</body>
+</html>
