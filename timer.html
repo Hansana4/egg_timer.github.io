@@ -7,15 +7,14 @@
     <title>Timer</title>
 </head>
 <body background="capybara.gif"; style="background-size: 100% 400%; ";>
-    <p id="countdown_timer_runny"></p> <!-- Timer will be displayed here -->
-
-        
+    <div>
+        <p id="countdown_timer_runny"></p> <!-- Timer will be displayed here -->
+        <button onclick="playSilentAudio(); hide(this)" id="startButton">Start Timer</button>
+    </div>
     <script src="app.js"></script>
-    <script>
-        // Extract the timer value from the URL query string
-        const urlParams = new URLSearchParams(window.location.search);
-        const timerValue = urlParams.get('timer') || 6; // Default to 6 minutes if no timer value is found
-        startTimer(parseInt(timerValue));
-    </script>
 </body>
+
+
+
+
 </html>
