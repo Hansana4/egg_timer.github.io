@@ -15,7 +15,16 @@ function startTimer(startTiming) {
         count.innerHTML = `${minutes}:${seconds}`;
 
         // Decrement the time
-        time--;
+
+        if (stat === "play") {
+            time--;
+        }
+
+            
+
+
+
+
         const alarm_sound = new Audio("capybara_song.mp3");
         alarm_sound.load();
         // When the time runs out
@@ -36,18 +45,32 @@ function startTimer(startTiming) {
             document.body.style.backgroundSize = "contain"; // Ensures the image covers the entire screen
             document.body.style.backgroundPosition = "center";
             document.body.style.backgroundColor = "#9cd9ec";
+
+
+            //show the back/end button
+            var endButton = document.getElementById("endButton");
+            endButton.style.display = "block";
             
         }
     }
 }
 
-// Extract the timer value from the URL query string
+// Extract the timer value from the URL query string, hide pause button, hide end button and set stat to play
 const urlParams = new URLSearchParams(window.location.search);
 const timerValue = urlParams.get('timer') || 6; // Default to 6 minutes if no timer value is found
+var stat = "play";
+
+var pauseButton = document.getElementById("pauseButton");
+pauseButton.style.display = "none";
+
+var endButton = document.getElementById("endButton");
+endButton.style.display = "none";
+
 
 // Add an event listener to the button
 document.getElementById("startButton").addEventListener("click", function() {
     startTimer(parseInt(timerValue));
+
 });
 
 // Preload alarm sound
@@ -61,4 +84,39 @@ function playSilentAudio() {
 
 function hide(x){
     x.style.display = "none";
+}
+
+function show(){
+    var pauseButton = document.getElementById("pauseButton");
+    pauseButton.style.display = "block";
+    var stat = "play";
+}
+
+
+
+function pause_resume() {
+    if (stat === "play") {
+        stat = "pause";  // ✅ Update the global variable
+    } else {
+        stat = "play";
+    }
+    console.log("Timer state:", stat);  // Debugging: Check if it switches
+}
+
+document.getElementById("pauseButton").addEventListener("click", function() {
+    pause_resume();
+    changeLabel();
+});
+
+
+function changeLabel() {
+    const button = 
+        document.getElementById('pauseButton');
+    if (button.innerHTML === 
+        'Pause') {
+        button.innerHTML = 'Resume';
+    } else {
+        button.innerHTML = 
+            'Pause';
+    }
 }
