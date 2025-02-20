@@ -37,3 +37,43 @@ body {
 #startButton:hover {
     background-color: #FFC107;
 }
+
+#pauseButton {
+    position: absolute;
+    bottom: 90px; /* Moves button down */
+    left: 67.5%;
+    transform: translateX(-50%); /* Centers button */
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+
+#pauseButton:hover {
+    background-color: #FFC107;
+}
+
+#endButton {
+    position: absolute;
+    bottom: 90px; /* Moves button down */
+    left: 67.5%;
+    transform: translateX(-50%); /* Centers button */
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+
+#endButton:hover {
+    background-color: #FFC107;
+}
