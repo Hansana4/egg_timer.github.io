@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="capybara.gif">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -12,8 +13,21 @@
 
 <div>
     <p id="countdown_timer_runny"></p> <!-- Timer will be displayed here -->
-    <button onclick="playSilentAudio(); hide(this)" id="startButton">Start Timer</button>
+    <button onclick="playSilentAudio(); hide(this); show();" id="startButton">Start Timer</button>
 </div>
+
+<div>
+    <button id="pauseButton";>Pause</button>
+</div>
+
+<div>
+    <a href="index.html" style="text-decoration: none;">
+        <button id="endButton";>Make it stop please</button>
+    </a>
+</div>
+
+
+
 <script src="app.js"></script>
 
 
